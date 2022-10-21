@@ -29,11 +29,7 @@ jobs:
         git config --global user.name "kongfl888 K"
     - name: Git Init
       run:  |
-        git clone https://github.com/openwrt/packages.git
-        cp -rf ./packages/net/https-dns-proxy/* ./
-        rm -rf ./packages/
-        git add .
-        git commit -m "Update from upstream" || echo ""
+        . ./patch.sh
     - name: Push Commits
       env:
         DOWNSTREAM_BRANCH: main
