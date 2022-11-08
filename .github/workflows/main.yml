@@ -8,6 +8,7 @@ on:
       - main
     paths:
       - '.github/workflows/main.yml'
+      - '.github/workflows/patch/*'
   schedule:
     - cron: '30 20 * * 1'
 
